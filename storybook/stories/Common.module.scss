@@ -1,0 +1,61 @@
+$content-height: 400px;
+$header-height: 80px;
+$layout-width: 500px;
+
+$color-aqua: rgba(0, 255, 255, 0.35);
+$color-blue: rgba(0, 0, 255, 0.35);
+$color-green: rgba(0, 255, 0, 0.35);
+$color-magenta: rgba(255, 0, 255, 0.35);
+$color-yellow: rgba(255, 255, 0, 0.35);
+
+.box {
+  display: flex;
+  margin: 4px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.contentBox {
+  composes: box;
+
+  background: $color-blue;
+  flex-grow: 4;
+  height: $content-height;
+}
+
+.footerBox {
+  composes: box;
+
+  background: $color-magenta;
+  height: $header-height;
+  width: 100%;
+}
+
+.headerBox {
+  composes: box;
+
+  background: $color-yellow;
+  height: $header-height;
+  width: 100%;
+}
+
+.layoutGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: $layout-width;
+}
+
+.sidebarLeftBox {
+  composes: box;
+
+  background: $color-green;
+  flex-grow: 1;
+}
+
+.sidebarRightBox {
+  composes: box;
+
+  background: $color-aqua;
+  flex-grow: 1;
+}

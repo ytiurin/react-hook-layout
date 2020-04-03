@@ -1,0 +1,18 @@
+.box {
+  display: inline-block;
+}
+
+.innerBox {
+  composes: box;
+
+  background: rgba(255, 0, 255, 0.35);
+  height: 380px;
+  margin: 24px;
+  width: 240px;
+}
+
+.outerBox {
+  composes: box;
+
+  background: rgba(0, 255, 0, 0.35);
+}
