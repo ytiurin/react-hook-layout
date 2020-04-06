@@ -1,6 +1,6 @@
 # react-hook-layout
 
-Use this hook to decouple layout from the page content. It is an extension of the layout component with slots, described on [this page](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance"). This hook introduce an interface, that allows to use layout **before** the layout component is created.
+This hook is an extension of the layout component with slots, described on [this page](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance"). It makes more easy to decouple layout code from this of the page content.
 
 ## Usage
 
