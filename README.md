@@ -1,6 +1,6 @@
 # react-hook-layout
 
-This hook is an extension of the layout component with slots, described on [this page](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance"). It makes more easy to decouple layout code from this of the page content.
+This hook is a variation of layout component concept, described on [this page](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance"). It makes more easy to decouple layout structure from the page content.
 
 ## Usage
 
