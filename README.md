@@ -1,10 +1,12 @@
 # react-hook-layout
 
-This hook is a variation of layout component concept, described on [this page](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance"). It makes more easy to decouple layout structure from the page content.
+This hook is a variation of the Layout component pattern, described on the [React patterns](https://reactpatterns.com/#layout-component "React patterns from beginners to advanced developers. Simple examples, short descriptions, and quality advice.") website, and mentioned in the React documentation as part of the [Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance") section.
+
+It adds a layer of abstraction between the page and layout components, and allows to develop a page without the need to create a layout component beforehand. It also becomes easy to switch between multiple layouts in the runtime.
 
 ## Usage
 
-Create page component, define slots and use blank layout.
+1. Create a page component and define slots with the according content.
 
 ```javascript
 import { defineSlots, useLayout } from "react-hook-layout";
@@ -22,9 +24,9 @@ const Page = () => {
 
   return (
     <Layout>
-      <Content>Content</Content>
-      <Footer>Footer</Footer>
-      <Header>Header</Header>
+      <Content>Center</Content>
+      <Footer>Bottom</Footer>
+      <Header>Top</Header>
       <SidebarLeft>Left</SidebarLeft>
       <SidebarRight>Right</SidebarRight>
     </Layout>
@@ -32,7 +34,13 @@ const Page = () => {
 };
 ```
 
-Create layout component and use slots.
+This component will render to:
+
+```html
+CenterBottomTopLeftRight
+```
+
+2. Create a layout component and fill it with slots, defining the structure of the layout.
 
 ```javascript
 import { useSlots } from "react-hook-layout";
@@ -58,7 +66,7 @@ export const CommonLayout = () => {
 };
 ```
 
-Use layout component on the page.
+3. Apply the layout component on the page.
 
 ```javascript
 const Page = () => {
@@ -66,6 +74,18 @@ const Page = () => {
   const Layout = useLayout(CommonLayout);
   // ...
 };
+```
+
+Now page will render to:
+
+```html
+<div className="common-layout">
+  <div className="header">Top</div>
+  <div className="sidebar-left">Left</div>
+  <div className="content">Center</div>
+  <div className="sidebar-right">Right</div>
+  <div className="footer">Bottom</div>
+</div>
 ```
 
 ## Install
@@ -82,7 +102,7 @@ yarn add react-hook-layout
 
 ## Examples
 
-Check more examples in Storybook
+Run storybook with examples:
 
 ```
 git clone https://github.com/ytiurin/react-hook-layout.git
