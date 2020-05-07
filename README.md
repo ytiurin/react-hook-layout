@@ -1,5 +1,7 @@
 # react-hook-layout
 
+[Demo page][demo]
+
 This hook is a variation of the Layout component pattern, described on the [React patterns](https://reactpatterns.com/#layout-component "React patterns from beginners to advanced developers. Simple examples, short descriptions, and quality advice.") website, and mentioned in the React documentation as part of the [Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance") section.
 
 It adds a layer of abstraction between the page and layout components, and allows to develop a page without the need to create a layout component beforehand. It also becomes easy to switch between multiple layouts in the runtime.
@@ -34,7 +36,7 @@ const Page = () => {
 };
 ```
 
-This component will render to:
+It will render to:
 
 ```html
 CenterBottomTopLeftRight
@@ -76,7 +78,7 @@ const Page = () => {
 };
 ```
 
-Now page will render to:
+Now, the page will render to:
 
 ```html
 <div className="common-layout">
@@ -94,7 +96,7 @@ Now page will render to:
 npm install react-hook-layout
 ```
 
-or
+_or_
 
 ```
 yarn add react-hook-layout
@@ -102,10 +104,16 @@ yarn add react-hook-layout
 
 ## Examples
 
-Run storybook with examples:
+Check examples on the [demo page][demo]
+
+_or_
+
+Run storybook localy:
 
 ```
 git clone https://github.com/ytiurin/react-hook-layout.git
 cd react-hook-layout/storybook
 npm run storybook
 ```
+
+[demo]: https://ytiurin.github.io/react-hook-layout/?path=/story/react-hook-layout--common-story
