@@ -1,6 +1,6 @@
 {
   "name": "react-hook-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Layout management in React.",
   "main": "./lib/index.js",
   "scripts": {
