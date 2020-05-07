@@ -57,5 +57,5 @@ CommonStory.story = {
 };
 
 export default {
-  title: "Layouts"
+  title: "react-hook-layout"
 };
