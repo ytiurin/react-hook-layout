@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run storybook",
-    "build-storybook": "build-storybook -c .storybook -o ../docs",
+    "build": "build-storybook -c .storybook -o ../docs",
     "storybook": "start-storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

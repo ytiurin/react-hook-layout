@@ -116,4 +116,4 @@ cd react-hook-layout/storybook
 npm run storybook
 ```
 
-[demo]: https://ytiurin.github.io/react-hook-layout/?path=/story/react-hook-layout--common-story
+[demo]: https://ytiurin.github.io/react-hook-layout/

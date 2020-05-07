@@ -47,5 +47,5 @@ SwipeStory.story = {
 };
 
 export default {
-  title: "react-hook-layout"
+  title: "react-hook-layout/Examples"
 };

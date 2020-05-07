@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
-    "build:docs": "cd ./storybook && npm run build-storybook && cd ..",
+    "build:docs": "cd ./storybook && npm run build && cd ..",
     "lint": "npx eslint ./src",
     "test:lib": "LIB=1 jest",
     "test:watch": "jest --watchAll",
