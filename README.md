@@ -81,12 +81,12 @@ const Page = () => {
 Now, the page will render to:
 
 ```html
-<div className="common-layout">
-  <div className="header">Top</div>
-  <div className="sidebar-left">Left</div>
-  <div className="content">Center</div>
-  <div className="sidebar-right">Right</div>
-  <div className="footer">Bottom</div>
+<div class="common-layout">
+  <div class="header">Top</div>
+  <div class="sidebar-left">Left</div>
+  <div class="content">Center</div>
+  <div class="sidebar-right">Right</div>
+  <div class="footer">Bottom</div>
 </div>
 ```
 
