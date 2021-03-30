@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/ytiurin/react-hook-layout#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
+    "@babel/cli": "^7.13.14",
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-modules-umd": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
