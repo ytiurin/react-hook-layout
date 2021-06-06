@@ -2,9 +2,15 @@
 
 [Demo page][demo]
 
-This hook is a variation of the Layout component pattern, described on the [React patterns](https://reactpatterns.com/#layout-component "React patterns from beginners to advanced developers. Simple examples, short descriptions, and quality advice.") website, and mentioned in the React documentation as part of the [Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance") section.
+This hook is a variation of the approach, described in [Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance") documentation page.
 
-It adds a layer of abstraction between the page and layout components, and allows to develop a page without the need to create a layout component beforehand. It also becomes easy to switch between multiple layouts in the runtime.
+Layout is now represented as a separate component, and can be used across different pages. Also, it's easy to switch between multiple layouts in runtime.
+
+## Install
+
+```
+npm i react-hook-layout
+```
 
 ## Usage
 
@@ -88,18 +94,6 @@ Now, the page will render to:
   <div class="sidebar-right">Right</div>
   <div class="footer">Bottom</div>
 </div>
-```
-
-## Install
-
-```
-npm install react-hook-layout
-```
-
-_or_
-
-```
-yarn add react-hook-layout
 ```
 
 ## Examples
