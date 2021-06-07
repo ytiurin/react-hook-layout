@@ -2,9 +2,9 @@
 
 [Demo page][demo]
 
-This hook is a variation of the approach, described in [Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance") documentation page.
+This hook is a variation of the approach, described on [Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html "Composition vs Inheritance") documentation page.
 
-Layout is now represented as a separate component, and can be used across different pages. Also, it's easy to switch between multiple layouts in runtime.
+Layout is now a separate component, and can be applied on different pages. Also, it's easy to switch layouts in runtime.
 
 ## Install
 
@@ -14,86 +14,48 @@ npm i react-hook-layout
 
 ## Usage
 
-1. Create a page component and define slots with the according content.
+1. Layout component look like this:
+
+```javascript
+import { useSlots } from "react-hook-layout";
+
+export const MyLayout = () => {
+  const { A, B } = useSlots("A", "B");
+
+  return (
+    <>
+      <article>{A}</article>
+      <footer>{B}</footer>
+    </>
+  );
+};
+```
+
+2. Page component using layout:
 
 ```javascript
 import { defineSlots, useLayout } from "react-hook-layout";
+import { MyLayout } from "./MyLayout";
 
-const Page = () => {
-  const { Content, Footer, Header, SidebarLeft, SidebarRight } = defineSlots(
-    "Content",
-    "Footer",
-    "Header",
-    "SidebarLeft",
-    "SidebarRight"
-  );
+const { A, B } = defineSlots("A", "B");
 
-  const Layout = useLayout();
+const MyPage = () => {
+  const Layout = useLayout(MyLayout);
 
   return (
     <Layout>
-      <Content>Center</Content>
-      <Footer>Bottom</Footer>
-      <Header>Top</Header>
-      <SidebarLeft>Left</SidebarLeft>
-      <SidebarRight>Right</SidebarRight>
+      <A>My article</A>
+      <B>Author by Me</B>
     </Layout>
   );
 };
 ```
 
-It will render to:
+Page will render to:
 
 ```html
-CenterBottomTopLeftRight
-```
-
-2. Create a layout component and fill it with slots, defining the structure of the layout.
-
-```javascript
-import { useSlots } from "react-hook-layout";
-
-export const CommonLayout = () => {
-  const { Content, Footer, Header, SidebarLeft, SidebarRight } = useSlots(
-    "Content",
-    "Footer",
-    "Header",
-    "SidebarLeft",
-    "SidebarRight"
-  );
-
-  return (
-    <div className="common-layout">
-      <div className="header">{Header}</div>
-      <div className="sidebar-left">{SidebarLeft}</div>
-      <div className="content">{Content}</div>
-      <div className="sidebar-right">{SidebarRight}</div>
-      <div className="footer">{Footer}</div>
-    </div>
-  );
-};
-```
-
-3. Apply the layout component on the page.
-
-```javascript
-const Page = () => {
-  // ...
-  const Layout = useLayout(CommonLayout);
-  // ...
-};
-```
-
-Now, the page will render to:
-
-```html
-<div class="common-layout">
-  <div class="header">Top</div>
-  <div class="sidebar-left">Left</div>
-  <div class="content">Center</div>
-  <div class="sidebar-right">Right</div>
-  <div class="footer">Bottom</div>
-</div>
+<article>My article</article>
+<footer>Author by Me</footer>
 ```
 
 ## Examples
